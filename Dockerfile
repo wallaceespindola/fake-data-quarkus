@@ -7,7 +7,7 @@ COPY src ./src
 RUN mvn -q -e -B -DskipTests package
 
 # Runtime stage
-FROM registry.access.redhat.com/ubi9/openjdk-21-runtime:1.20
+FROM registry.access.redhat.com/ubi9/openjdk-21-runtime:1.23
 ENV LANGUAGE='en_US:en'
 WORKDIR /work/
 
