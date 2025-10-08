@@ -1,0 +1,68 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# CI/CD
+.github/
+
+# Documentation
+README.md
+LICENSE
+*.md
+MIGRATION.md
+CONVERSION_SUMMARY.md
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+.factorypath
+
+# Maven build output (will be rebuilt in container)
+target/
+
+# OS-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor backup files
+*~
+*.swp
+*.swo
+*.tmp
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+
+# Test reports
+surefire-reports/
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Postman collection (not needed in container)
+postman/
+
+# Makefile
+Makefile
+

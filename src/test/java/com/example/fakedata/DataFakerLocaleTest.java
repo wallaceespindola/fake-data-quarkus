@@ -12,8 +12,9 @@ import lombok.extern.slf4j.Slf4j;
 import net.datafaker.Faker;
 
 /**
- * Standalone tests for DataFaker with various locales. Tests different locales to verify that locale-specific data is generated
- * correctly. Does not use User objects or DTOs - just pure DataFaker tests.
+ * Standalone tests for DataFaker with various locales.
+ * Tests different locales to verify that locale-specific data is generated correctly.
+ * Does not use User objects or DTOs - just pure DataFaker tests.
  */
 @Slf4j
 class DataFakerLocaleTest
