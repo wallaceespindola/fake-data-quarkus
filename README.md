@@ -74,9 +74,9 @@ make clean      # Clean build artifacts
 ### Access the Application
 
 - **Test UI**: [http://localhost:8080/](http://localhost:8080/)
-- **Swagger UI**: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) or [http://localhost:8080/q/swagger-ui](http://localhost:8080/q/swagger-ui)
-- **OpenAPI JSON**: [http://localhost:8080/v3/api-docs](http://localhost:8080/v3/api-docs) or [http://localhost:8080/q/openapi](http://localhost:8080/q/openapi)
-- **Health Check**: [http://localhost:8080/actuator/health](http://localhost:8080/actuator/health) or [http://localhost:8080/q/health](http://localhost:8080/q/health)
+- **Swagger UI**: [http://localhost:8080/q/swagger-ui](http://localhost:8080/q/swagger-ui)
+- **OpenAPI JSON**: [http://localhost:8080/q/openapi](http://localhost:8080/q/openapi)
+- **Health Check**: [http://localhost:8080/actuator/health](http://localhost:8080/actuator/health)
 - **Health UI**: [http://localhost:8080/q/health-ui](http://localhost:8080/q/health-ui)
 - **Info**: [http://localhost:8080/actuator/info](http://localhost:8080/actuator/info)
 - **Dev UI**: [http://localhost:8080/q/dev](http://localhost:8080/q/dev) (only in dev mode)
@@ -236,8 +236,9 @@ fake-data-quarkus/
 │   │   │   └── config/         # Quarkus configuration
 │   │   └── resources/
 │   │       ├── application.properties
-│   │       └── static/
-│   │           └── index.html  # Test UI
+│   │       └── META-INF/
+│   │           └── resources/
+│   │               └── index.html  # Test UI
 │   └── test/
 │       └── java/.../fakedata/
 │           ├── controller/
@@ -261,9 +262,13 @@ Key application properties (`application.properties`):
 # HTTP Configuration
 quarkus.http.port=8080
 
+# Dev UI Configuration
+quarkus.dev-ui.always-include=false
+quarkus.http.root-path=/
+
 # OpenAPI/Swagger Configuration
 quarkus.swagger-ui.always-include=true
-quarkus.swagger-ui.path=/swagger-ui.html
+quarkus.smallrye-openapi.path=/q/openapi
 
 # Health Configuration
 quarkus.smallrye-health.ui.always-include=true
@@ -271,7 +276,7 @@ quarkus.smallrye-health.root-path=/actuator/health
 
 # Application Info
 quarkus.application.name=FakeData Service Quarkus
-quarkus.application.version=1.0.0
+quarkus.application.version=@project.version@
 ```
 
 ## Quarkus Features
