@@ -81,6 +81,8 @@ make clean      # Clean build artifacts
 - **Info**: [http://localhost:8080/actuator/info](http://localhost:8080/actuator/info)
 - **Dev UI**: [http://localhost:8080/q/dev](http://localhost:8080/q/dev) (only in dev mode)
 
+![test-page.png](src/main/resources/images/test-page.png)
+
 ## API Endpoints
 
 ### Generate Users
