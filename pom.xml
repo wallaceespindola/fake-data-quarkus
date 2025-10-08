@@ -1,9 +1,11 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
    <modelVersion>4.0.0</modelVersion>
+
    <groupId>com.example</groupId>
    <artifactId>fake-data-quarkus</artifactId>
    <version>1.0.0</version>
+
    <properties>
       <maven.compiler.release>21</maven.compiler.release>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,6 +18,7 @@
       <datafaker.version>2.5.1</datafaker.version>
       <easyrandom.version>7.1.1</easyrandom.version>
    </properties>
+
    <dependencyManagement>
       <dependencies>
          <dependency>
@@ -27,6 +30,7 @@
          </dependency>
       </dependencies>
    </dependencyManagement>
+
    <dependencies>
       <dependency>
          <groupId>io.quarkus</groupId>
@@ -54,6 +58,15 @@
          <version>${datafaker.version}</version>
       </dependency>
 
+      <!-- Code from 2020 - has few CVEs -->
+      <!-- &lt;!&ndash; https://mvnrepository.com/artifact/org.jeasy/easy-random-core &ndash;&gt;-->
+      <!-- <dependency>-->
+      <!--    <groupId>org.jeasy</groupId>-->
+      <!--    <artifactId>easy-random-core</artifactId>-->
+      <!--    <version>5.0.0</version>-->
+      <!--    <scope>test</scope>-->
+      <!-- </dependency>-->
+
       <!-- Code from 2025 - has no CVE -->
       <!-- https://mvnrepository.com/artifact/io.github.dvgaba/easy-random-core -->
       <dependency>
@@ -79,7 +92,14 @@
          <scope>test</scope>
       </dependency>
    </dependencies>
+
    <build>
+      <resources>
+         <resource>
+            <directory>src/main/resources</directory>
+            <filtering>true</filtering>
+         </resource>
+      </resources>
       <plugins>
          <plugin>
             <groupId>${quarkus.platform.group-id}</groupId>
@@ -134,6 +154,7 @@
          </plugin>
       </plugins>
    </build>
+
    <profiles>
       <profile>
          <id>native</id>
@@ -148,4 +169,5 @@
          </properties>
       </profile>
    </profiles>
+
 </project>

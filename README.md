@@ -1,8 +1,7 @@
-![Java](https://cdn.icon-icons.com/icons2/2699/PNG/512/java_logo_icon_168609.png)
+![quarkus-logo.png](src/main/resources/images/quarkus-logo.png)
 
 # Fake Data API - Quarkus Demo
 
-![Apache 2.0 License](https://img.shields.io/badge/License-Apache2.0-orange)
 ![Java](https://img.shields.io/badge/Built_with-Java21-blue)
 ![Junit5](https://img.shields.io/badge/Tested_with-Junit5-teal)
 ![Quarkus](https://img.shields.io/badge/Powered_by-Quarkus-red)
@@ -10,6 +9,7 @@
 ![Swagger](https://img.shields.io/badge/Docs_by-Swagger-yellow)
 ![OpenAPI](https://img.shields.io/badge/Specs_by-OpenAPI-purple)
 ![Docker](https://img.shields.io/badge/Containerized_with-Docker-blue)
+![Apache 2.0 License](https://img.shields.io/badge/License-Apache2.0-orange)
 [![CI](https://github.com/wallaceespindola/fake-data-quarkus/actions/workflows/ci.yml/badge.svg)](https://github.com/wallaceespindola/fake-data-quarkus/actions/workflows/ci.yml)
 
 ## Introduction
@@ -73,12 +73,13 @@ make clean      # Clean build artifacts
 
 ### Access the Application
 
-- **Test UI**: `http://localhost:8080/`
-- **Swagger UI**: `http://localhost:8080/swagger-ui.html` or `http://localhost:8080/q/swagger-ui`
-- **OpenAPI JSON**: `http://localhost:8080/v3/api-docs` or `http://localhost:8080/q/openapi`
-- **Health Check**: `http://localhost:8080/actuator/health` or `http://localhost:8080/q/health`
-- **Health UI**: `http://localhost:8080/q/health-ui`
-- **Dev UI**: `http://localhost:8080/q/dev` (only in dev mode)
+- **Test UI**: [http://localhost:8080/](http://localhost:8080/)
+- **Swagger UI**: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) or [http://localhost:8080/q/swagger-ui](http://localhost:8080/q/swagger-ui)
+- **OpenAPI JSON**: [http://localhost:8080/v3/api-docs](http://localhost:8080/v3/api-docs) or [http://localhost:8080/q/openapi](http://localhost:8080/q/openapi)
+- **Health Check**: [http://localhost:8080/actuator/health](http://localhost:8080/actuator/health) or [http://localhost:8080/q/health](http://localhost:8080/q/health)
+- **Health UI**: [http://localhost:8080/q/health-ui](http://localhost:8080/q/health-ui)
+- **Info**: [http://localhost:8080/actuator/info](http://localhost:8080/actuator/info)
+- **Dev UI**: [http://localhost:8080/q/dev](http://localhost:8080/q/dev) (only in dev mode)
 
 ## API Endpoints
 
@@ -269,7 +270,7 @@ quarkus.smallrye-health.ui.always-include=true
 quarkus.smallrye-health.root-path=/actuator/health
 
 # Application Info
-quarkus.application.name=FakeData Service
+quarkus.application.name=FakeData Service Quarkus
 quarkus.application.version=1.0.0
 ```
 

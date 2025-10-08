@@ -8,7 +8,7 @@ import org.eclipse.microprofile.openapi.annotations.info.License;
 
 @OpenAPIDefinition(
       info = @Info(
-            title = "Fake Data API",
+            title = "Fake Data API Quarkus",
             version = "1.0.0",
             description = "Demo API using Datafaker + Easy Random",
             license = @License(
