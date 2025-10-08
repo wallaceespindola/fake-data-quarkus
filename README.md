@@ -83,6 +83,8 @@ make clean      # Clean build artifacts
 
 ![test-page.png](src/main/resources/images/test-page.png)
 
+![swagger-page.png](src/main/resources/images/swagger-page.png)
+
 ## API Endpoints
 
 ### Generate Users
