@@ -130,6 +130,7 @@ make test
 1. **UserControllerTests.java** - Quarkus integration tests for the controller
 2. **DataGenServiceTest.java** - Quarkus-based service tests (15 test cases)
 3. **DataGenServiceUnitTest.java** - Fast non-Quarkus unit tests (15 test cases)
+4. **DataFakerLocaleTest.java** - Standalone locale-specific DataFaker tests
 
 ### Test Coverage
 
@@ -245,6 +246,7 @@ fake-data-quarkus/
 │   │               └── index.html  # Test UI
 │   └── test/
 │       └── java/.../fakedata/
+│           ├── DataFakerLocaleTest.java
 │           ├── controller/
 │           │   └── UserControllerTests.java
 │           └── service/
