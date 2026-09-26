@@ -6,6 +6,14 @@
    <artifactId>fake-data-quarkus</artifactId>
    <version>1.0.0</version>
 
+   <developers>
+      <developer>
+         <name>Wallace Espindola</name>
+         <email>wallace.espindola@gmail.com</email>
+         <url>https://github.com/wallaceespindola/</url>
+      </developer>
+   </developers>
+
    <properties>
       <maven.compiler.release>21</maven.compiler.release>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
